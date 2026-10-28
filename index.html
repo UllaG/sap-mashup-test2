@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Issue</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5f5f5;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-muted: #555555;
+      --border: #d0d0d0;
+      --accent: #2563eb;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --surface: #1e1e1e;
+        --text: #e8e8e8;
+        --text-muted: #a0a0a0;
+        --border: #3a3a3a;
+        --accent: #60a5fa;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1.75rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0.5rem 0 0;
+    }
+
+    li {
+      padding: 0.2rem 0 0.2rem 0.25rem;
+    }
+
+    li::before {
+      content: "·";
+      margin-right: 0.5rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .standalone {
+      margin-top: 0.5rem;
+      color: var(--text);
+    }
+
+    @media print {
+      body {
+        background: white;
+        color: black;
+        padding: 0;
+      }
+
+      .container {
+        border: none;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Software Issue</h1>
+
+    <section>
+      <h2>Alarm Message</h2>
+      <p>Enter Alarm Message shown in the software.</p>
+    </section>
+
+    <section>
+      <h2>Recent Activities</h2>
+      <ul>
+        <li>Has maintenance / service been carried out?</li>
+        <li>Has hardware been exchanged?</li>
+        <li>Has a new software version / configuration been installed?</li>
+        <li>Has the component/software/system been power cycled? Before and/or after the error?</li>
+        <li>What was the last action done by Evatec (retrofit, software update, hardware, maintenance, service)?</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Recent Unexpected Events</h2>
+      <ul>
+        <li>Has there been a power outage?</li>
+        <li>Has there been another alarm or failure event before? How was it recovered?</li>
+      </ul>
+      <p class="standalone">Has there been a problem in the customer facility (water, gas, electricity, pumps)?</p>
+    </section>
+
+    <section>
+      <h2>Error/Issue Occurrence</h2>
+      <ul>
+        <li>Describe what needs to be done to force the error.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
